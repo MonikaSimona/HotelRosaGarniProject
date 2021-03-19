@@ -1,0 +1,183 @@
+@font-face {
+  font-family: Arvo;
+  src: url("../fonts/Arvo-Regular.ttf");
+}
+
+.main {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arvo';
+}
+
+.box {
+  width: 256px;
+  height: 255px;
+  padding: 0 10px;
+  position: relative;
+  z-index: 101;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box span {
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.bg-2-c {
+  background-color: #d94e39ce;
+}
+
+.bg-w {
+  background-color: rgba(255, 255, 255, 0.644);
+  scale: 0.9;
+}
+
+.wrapper {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.logo-text {
+  display: inline-block;
+  width: 30px;
+  font-weight: lighter;
+  margin-left: 5px;
+  font-size: 25px;
+}
+
+.menu {
+  position: relative;
+  z-index: 101;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.menu-items {
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+span {
+  display: inline-block;
+}
+
+.text-section {
+  height: 100%;
+}
+
+.text-section .col {
+  height: 100%;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/Asset 1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+  position: relative;
+}
+
+.section-2 {
+  height: 600px;
+}
+
+.bg-1 {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/Asset 2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  scale: 1.2;
+  position: relative;
+}
+
+.bg-2 {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/Asset 3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  scale: 1.2;
+  position: relative;
+}
+
+.bg-3 {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/Asset 4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  scale: 2;
+  position: relative;
+}
+
+.text {
+  width: 100%;
+  height: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+  color: white;
+  position: relative;
+  z-index: 101;
+}
+
+.text h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.text h3 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.text .line {
+  height: 2px;
+  width: 100px;
+  background-color: white;
+  margin: 10px 0;
+}
+/*# sourceMappingURL=main.css.map */
