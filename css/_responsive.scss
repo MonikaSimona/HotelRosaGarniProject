@@ -1,0 +1,113 @@
+@include media-md {
+  .headline {
+    h1 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .mail-form {
+    width: 70%;
+    input {
+      padding: 10px 5px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    button {
+      width: 100%;
+    }
+  }
+  .footer {
+    text-align: center;
+  }
+  .section-3-text {
+    text-align: center;
+    h1 {
+      font-size: 25px;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+    img {
+      height: 100px;
+    }
+  }
+  .section-2 {
+    height: auto;
+    .box {
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+    }
+  }
+  .info-form {
+    width: 80%;
+  }
+  html {
+    width: 100%;
+  }
+  .menu {
+    .logo-image {
+      width: 50px;
+      height: 50px;
+    }
+    .logo-text {
+      font-size: 15px;
+    }
+    .menu-items {
+      span {
+        font-size: 0.6rem;
+      }
+      .cross-line {
+        width: 50px;
+      }
+    }
+  }
+.text-section{
+  .text {
+    h1 {
+      font-size: 40px;
+      padding: 0 10px;
+      
+    }
+    h3 {
+      font-size: 20px;
+    }
+    .right-arrow{
+      position: absolute;
+      right: 30px;
+    }
+    .left-arrow{
+      position: absolute;
+      left: 30px;
+    }
+    .down-arrow{
+      position: absolute;
+      bottom: 30px;
+    }
+  }
+}
+  
+}
+@include media-lg {
+    html {
+        width: 100%;
+      }
+  .menu-items {
+    
+    .text {
+        
+      h1 {
+        font-size: 50px;
+        
+      }
+      h3 {
+        font-size: 30px;
+      }
+    }
+  }
+}
+@include media-xl {
+}

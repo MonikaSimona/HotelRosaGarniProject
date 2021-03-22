@@ -1,0 +1,30 @@
+$width: 100px;
+$secondary-color: #d94d39;
+$ternary-color: #7a7a7a;
+
+
+@mixin media-sm {
+    @media screen and (max-width:576px) {
+        @content;
+    }
+    
+}
+
+@mixin media-md {
+    @media screen and (max-width:768px) {
+        @content;
+    }
+    
+}
+@mixin media-lg {
+    @media screen and (max-width:992px) {
+        @content;
+    }
+    
+}
+@mixin media-xl {
+    @media screen and (max-width:1200px) {
+        @content;
+    }
+    
+}
