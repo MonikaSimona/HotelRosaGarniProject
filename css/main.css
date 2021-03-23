@@ -7,6 +7,198 @@ html {
   scroll-behavior: smooth;
 }
 
+.ui-datepicker {
+  position: relative;
+  z-index: 10;
+  background-color: white;
+  width: 250px;
+  font-family: "Arvo";
+}
+
+.ui-datepicker .ui-datepicker-header {
+  padding: 10px;
+  height: 50px;
+  background-color: #ededed !important;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #7a7a7a;
+}
+
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next {
+  visibility: hidden;
+}
+
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next::after {
+  visibility: visible;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+  content: ">";
+}
+
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev {
+  visibility: hidden;
+}
+
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev::after {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  padding: 10px;
+  font-size: 1.5rem;
+  text-align: center;
+  visibility: visible;
+  content: "<";
+}
+
+.ui-datepicker .ui-datepicker-header .ui-datepicker-title {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-transform: uppercase;
+  color: #d94d39;
+  font-size: 1.5rem;
+}
+
+.ui-datepicker .ui-datepicker-header .ui-datepicker-title .ui-datepicker-year {
+  display: none;
+}
+
+.ui-datepicker .ui-datepicker-calendar {
+  position: relative;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #7a7a7a;
+}
+
+.ui-datepicker .ui-datepicker-calendar thead tr {
+  background-color: #ededed !important;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 0.8rem;
+  color: #7a7a7a;
+  padding: 0 10px 0 10px;
+}
+
+.ui-datepicker .ui-datepicker-calendar thead tr span[title=Sunday] {
+  visibility: hidden;
+  font-size: 0.1rem;
+}
+
+.ui-datepicker .ui-datepicker-calendar thead tr span[title=Sunday]::after {
+  visibility: visible;
+  font-size: 0.7rem;
+  content: "SUN";
+}
+
+.ui-datepicker .ui-datepicker-calendar thead tr span[title=Monday] {
+  visibility: hidden;
+  font-size: 0.1rem;
+}
+
+.ui-datepicker .ui-datepicker-calendar thead tr span[title=Monday]::after {
+  visibility: visible;
+  font-size: 0.7rem;
+  content: "MON";
+}
+
+.ui-datepicker .ui-datepicker-calendar thead tr span[title=Tuesday] {
+  visibility: hidden;
+  font-size: 0.1rem;
+}
+
+.ui-datepicker .ui-datepicker-calendar thead tr span[title=Tuesday]::after {
+  visibility: visible;
+  font-size: 0.7rem;
+  content: "TUE";
+}
+
+.ui-datepicker .ui-datepicker-calendar thead tr span[title=Wednesday] {
+  visibility: hidden;
+  font-size: 0.1rem;
+}
+
+.ui-datepicker .ui-datepicker-calendar thead tr span[title=Wednesday]::after {
+  visibility: visible;
+  font-size: 0.7rem;
+  content: "WEN";
+}
+
+.ui-datepicker .ui-datepicker-calendar thead tr span[title=Thursday] {
+  visibility: hidden;
+  font-size: 0.1rem;
+}
+
+.ui-datepicker .ui-datepicker-calendar thead tr span[title=Thursday]::after {
+  visibility: visible;
+  font-size: 0.7rem;
+  content: "THU";
+}
+
+.ui-datepicker .ui-datepicker-calendar thead tr span[title=Friday] {
+  visibility: hidden;
+  font-size: 0.1rem;
+}
+
+.ui-datepicker .ui-datepicker-calendar thead tr span[title=Friday]::after {
+  visibility: visible;
+  font-size: 0.7rem;
+  content: "FRI";
+}
+
+.ui-datepicker .ui-datepicker-calendar thead tr span[title=Saturday] {
+  visibility: hidden;
+  font-size: 0.1rem;
+}
+
+.ui-datepicker .ui-datepicker-calendar thead tr span[title=Saturday]::after {
+  visibility: visible;
+  font-size: 0.7rem;
+  content: "SAT";
+}
+
+.ui-datepicker .ui-datepicker-calendar tbody {
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.ui-datepicker .ui-datepicker-calendar tbody tr td a {
+  font-size: 0.9rem;
+  color: #7a7a7a;
+  margin: 5px;
+}
+
+.ui-datepicker .ui-datepicker-calendar tbody tr td a:hover {
+  text-decoration: none;
+}
+
 .main {
   width: 100%;
   margin: 0;

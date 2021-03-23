@@ -1,4 +1,7 @@
 $(() => {
+    $('#datepicker1').datepicker();
+    $('#datepicker2').datepicker();
+  
 
     let meetUs = $('.meet-us');
     let menuDrop = $('.menu-drop');

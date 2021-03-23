@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <title>Document</title>
 </head>
 
@@ -159,8 +160,7 @@
                     </div>
                     <form class="info-form">
                         <div class="row m-0 p-0 m-lg-0 m-md-0 m-sm-0 p-lg-0 p-md-0 p-sm-0 ">
-                            <div
-                                class="col
+                            <div class="col
                                 m-0 p-0 m-lg-0 m-md-0 m-sm-0 p-lg-0 p-md-0 p-sm-0
                                  d-flex 
                                 justify-content-lg-between 
@@ -180,11 +180,16 @@
                                 </span>
                                 <span class="section">
                                     <label for="date-from">From:</label>
-                                    <input type="date" id="date-from">
+                                    
+                                        <input type="text" id="datepicker1">
+                                    
+
                                 </span>
                                 <span class="section">
                                     <label for="date-to">To:</label>
-                                    <input type="date" id="date-to">
+                                    
+                                        <input type="text" id="datepicker2">
+                                    
                                 </span>
                             </div>
                         </div>
@@ -223,14 +228,15 @@
                             <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 pl-lg-0 pl-xl-0 textarea-label  ">
                                 <div class="section ">
                                     <label for="ask">Ask everything:</label>
-                                    
+
                                 </div>
                             </div>
                             <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-lg-0 p-xl-0 textarea ">
-                                <textarea id="ask" class="notes " rows="3"  wrap="soft" ></textarea>
+                                <textarea id="ask" class="notes " rows="3" wrap="soft"></textarea>
                             </div>
                         </div>
-                        <button class="full-button w-100 mt-5 mt-sm-5 mt-md-2 mt-lg-2 mt-xl-2 " type="submit">Send your request</button>
+                        <button class="full-button w-100 mt-5 mt-sm-5 mt-md-2 mt-lg-2 mt-xl-2 " type="submit">Send your
+                            request</button>
                 </div>
             </div>
         </div>
@@ -299,6 +305,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <script src="./js/main.js"></script>
 </body>

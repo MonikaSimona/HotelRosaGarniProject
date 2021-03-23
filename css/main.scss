@@ -4,6 +4,176 @@
 html {
   scroll-behavior: smooth;
 }
+
+
+.ui-datepicker {
+  position: relative;
+  z-index: 10;
+  background-color: white;
+  width: 250px;
+  font-family: "Arvo";
+  .ui-datepicker-header {
+    padding: 10px;
+    height: 50px;
+    background-color: lighten($ternary-color, 45%) !important;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    color: $ternary-color;
+    .ui-datepicker-next {
+      visibility: hidden;
+
+      &::after {
+        visibility: visible;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 10px;
+        font-size: 1.5rem;
+        text-align: center;
+        content: ">";
+      }
+    }
+    .ui-datepicker-prev {
+      visibility: hidden;
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        padding: 10px;
+        font-size: 1.5rem;
+        text-align: center;
+        visibility: visible;
+        content: "<";
+      }
+    }
+    .ui-datepicker-title {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-transform: uppercase;
+      color: $secondary-color;
+      font-size: 1.5rem;
+
+      .ui-datepicker-year {
+        display: none;
+      }
+    }
+  }
+  .ui-datepicker-calendar {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    color: $ternary-color;
+    thead {
+      tr {
+        background-color: lighten($ternary-color, 45%) !important;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        font-weight: 100;
+        font-size: 0.8rem;
+        color: $ternary-color;
+        padding: 0 10px 0 10px;
+        span[title=Sunday]{
+          visibility: hidden;
+          font-size:0.1rem;
+          &::after{
+            visibility: visible;
+            font-size:0.7rem;
+            
+            content: "SUN";
+          }
+        }
+        span[title=Monday]{
+          visibility: hidden;
+          font-size:0.1rem;
+          &::after{
+            visibility: visible;
+            font-size:0.7rem;
+            
+            content: "MON";
+          }
+        }
+        span[title=Tuesday]{
+          visibility: hidden;
+          font-size:0.1rem;
+          &::after{
+            visibility: visible;
+            font-size:0.7rem;
+            
+           
+
+            content: "TUE";
+          }
+        }
+        span[title=Wednesday]{
+          visibility: hidden;
+          font-size:0.1rem;
+          &::after{
+            visibility: visible;
+            font-size:0.7rem;
+            
+            content: "WEN";
+          }
+        }
+        span[title=Thursday]{
+          visibility: hidden;
+          font-size:0.1rem;
+          &::after{
+            visibility: visible;
+            font-size:0.7rem;
+            
+            content: "THU";
+          }
+        }
+        span[title=Friday]{
+          visibility: hidden;
+          font-size:0.1rem;
+          &::after{
+            visibility: visible;
+            font-size:0.7rem;
+            
+            content: "FRI";
+          }
+        }
+        span[title=Saturday]{
+          visibility: hidden;
+          font-size:0.1rem;
+          &::after{
+            visibility: visible;
+            font-size:0.7rem;
+            content: "SAT";
+          }
+        }
+        
+      }
+      
+    }
+    tbody {
+      margin: 10px auto;
+      padding: 10px;
+      tr {
+        td {
+          a {
+            font-size: 0.9rem;
+            color: $ternary-color;
+            margin: 5px;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 .main {
   width: 100%;
   margin: 0;
@@ -304,7 +474,8 @@ html {
     margin: 0;
     padding: 0;
   }
-  .custom-margin{
+
+  .custom-margin {
     display: inline-block;
     width: 11px;
     margin-bottom: -11px;
@@ -314,7 +485,6 @@ html {
   }
 
   .notes {
-    
     width: 97.5%;
     background-attachment: local;
     text-indent: 410px;
@@ -331,7 +501,7 @@ html {
         white 31px,
         transparent 31px
       );
-      
+
     line-height: 30px;
     padding: 5px 10px;
   }
@@ -375,27 +545,26 @@ html {
     flex-wrap: wrap;
     position: relative;
     height: 150px;
-    .section{
+    .section {
       position: relative;
       width: 125px;
     }
-    .selects{
+    .selects {
       height: fit-content;
     }
-   
-    .textarea-label{
+
+    .textarea-label {
       display: flex;
       position: absolute;
       top: 0;
       left: 300px;
     }
-    .textarea{
+    .textarea {
       position: absolute;
       top: 0;
       left: 10px;
-      
     }
-    
+
     .valueA,
     .valueC {
       font-weight: bold;
