@@ -370,7 +370,7 @@ html {
 }
 
 .info-form {
-  width: 50%;
+  width: 60%;
 }
 
 .info-form input,
@@ -383,11 +383,22 @@ html {
   padding: 0;
 }
 
+.info-form .custom-margin {
+  display: inline-block;
+  width: 11px;
+  margin-bottom: -11px;
+  border-bottom: 5px solid #d94d39;
+  position: relative;
+  z-index: 5;
+}
+
 .info-form .notes {
+  width: 97.5%;
   background-attachment: local;
+  text-indent: 410px;
   background-image: linear-gradient(to right, transparent 5px, transparent 10px), linear-gradient(to left, transparent 10px, transparent 10px), repeating-linear-gradient(transparent, transparent 30px, white 30px, white 31px, transparent 31px);
-  line-height: 31px;
-  padding: 8px 10px;
+  line-height: 30px;
+  padding: 5px 10px;
 }
 
 .info-form label {
@@ -396,6 +407,7 @@ html {
 
 .info-form .cs {
   width: 40px;
+  height: 100%;
   display: inline-block;
   position: absolute;
   right: 0;
@@ -427,6 +439,11 @@ html {
 }
 
 .info-form .second {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: relative;
   height: 150px;
 }
@@ -436,7 +453,29 @@ html {
   width: 125px;
 }
 
-.info-form .second .valueA, .info-form .second .valueC {
+.info-form .second .selects {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.info-form .second .textarea-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 300px;
+}
+
+.info-form .second .textarea {
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+
+.info-form .second .valueA,
+.info-form .second .valueC {
   font-weight: bold;
 }
 
@@ -474,11 +513,10 @@ html {
 
 .info-form textarea {
   position: absolute;
-  top: 0;
+  top: -6px;
 }
 
 .info-form .section {
-  position: relative;
   display: inline-block;
   border-bottom: 1px solid white;
 }
@@ -538,6 +576,7 @@ html {
 
 .footer {
   height: 900px;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -613,6 +652,22 @@ html {
   background-color: #d94d39;
 }
 
+@media screen and (max-width: 576px) {
+  .info-form .notes {
+    width: 290px !important;
+  }
+  .info-form .second {
+    width: 98%;
+  }
+  .mail-form input {
+    margin-bottom: 10px;
+  }
+  .menu .menu-items .cross-line {
+    -webkit-transform: rotate(0deg) !important;
+            transform: rotate(0deg) !important;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .headline h1 {
     font-size: 30px;
@@ -624,9 +679,9 @@ html {
     width: 70%;
   }
   .mail-form input {
-    padding: 10px 5px;
+    padding: 15px 5px;
     width: 100%;
-    margin-bottom: 10px;
+    margin-right: 10px;
   }
   .mail-form button {
     width: 100%;
@@ -657,6 +712,31 @@ html {
   .info-form {
     width: 80%;
   }
+  .info-form .notes {
+    width: 600px;
+    text-indent: 105px;
+  }
+  .info-form .selects {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .info-form .second .textarea-label {
+    position: absolute;
+    top: 40px;
+    left: 0;
+  }
+  .info-form .second .textarea {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+  }
   html {
     width: 100%;
   }
@@ -671,8 +751,8 @@ html {
     font-size: 0.8rem;
   }
   .menu .menu-items .cross-line {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
     width: 50px;
   }
   .menu .menu-drop {
