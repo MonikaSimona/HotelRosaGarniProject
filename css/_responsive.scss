@@ -58,11 +58,15 @@
     }
     .menu-items {
       span {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
       }
       .cross-line {
+        transform: rotate(0deg);
         width: 50px;
       }
+    }
+    .menu-drop{
+      width: 160px;
     }
   }
 .text-section{
@@ -77,11 +81,11 @@
     }
     .right-arrow{
       position: absolute;
-      right: 30px;
+      right: 10px;
     }
     .left-arrow{
       position: absolute;
-      left: 30px;
+      left: 10px;
     }
     .down-arrow{
       position: absolute;

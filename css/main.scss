@@ -81,14 +81,13 @@ html {
     span {
       cursor: pointer;
     }
-
-    
       .menu-drop {
         display: none;
         position: absolute;
         top: 30px;
         left: 0;
         width: 230px;
+        z-index: 6;
         color: $ternary-color;
         &-item {
           text-transform: none;
