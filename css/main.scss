@@ -5,30 +5,41 @@ html {
   scroll-behavior: smooth;
 }
 
-
 .ui-datepicker {
   position: relative;
+  padding: 0 !important;
   z-index: 10;
   background-color: white;
   width: 250px;
   font-family: "Arvo";
   .ui-datepicker-header {
+    font-family: "Arvo";
+    margin: 0;
     padding: 10px;
     height: 50px;
     background-color: lighten($ternary-color, 45%) !important;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
     position: relative;
     display: flex;
-    justify-content: space-between;
+    align-items: center !important;
     color: $ternary-color;
+    .ui-icon {
+      display: none;
+    }
     .ui-datepicker-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
       visibility: hidden;
 
       &::after {
         visibility: visible;
         position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        top:-15px;
+        right: 0 !important;
         padding: 10px;
         font-size: 1.5rem;
         text-align: center;
@@ -36,13 +47,15 @@ html {
       }
     }
     .ui-datepicker-prev {
+      position: absolute; 
+      top: 50%;
+      transform: translateY(-50%);
       visibility: hidden;
 
       &::after {
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
         left: 0;
+        top: -15px;
         padding: 10px;
         font-size: 1.5rem;
         text-align: center;
@@ -52,9 +65,9 @@ html {
     }
     .ui-datepicker-title {
       position: absolute;
-      top: 10px;
       left: 50%;
       transform: translateX(-50%);
+      margin: 0 !important;
       text-transform: uppercase;
       color: $secondary-color;
       font-size: 1.5rem;
@@ -65,6 +78,7 @@ html {
     }
   }
   .ui-datepicker-calendar {
+    font-family: "Arvo";
     position: relative;
     z-index: 100;
     display: flex;
@@ -81,80 +95,76 @@ html {
         font-size: 0.8rem;
         color: $ternary-color;
         padding: 0 10px 0 10px;
-        span[title=Sunday]{
+        span[title="Sunday"] {
           visibility: hidden;
-          font-size:0.1rem;
-          &::after{
+          font-size: 0.1rem;
+          &::after {
             visibility: visible;
-            font-size:0.7rem;
-            
+            font-size: 0.7rem;
+
             content: "SUN";
           }
         }
-        span[title=Monday]{
+        span[title="Monday"] {
           visibility: hidden;
-          font-size:0.1rem;
-          &::after{
+          font-size: 0.1rem;
+          &::after {
             visibility: visible;
-            font-size:0.7rem;
-            
+            font-size: 0.7rem;
+
             content: "MON";
           }
         }
-        span[title=Tuesday]{
+        span[title="Tuesday"] {
           visibility: hidden;
-          font-size:0.1rem;
-          &::after{
+          font-size: 0.1rem;
+          &::after {
             visibility: visible;
-            font-size:0.7rem;
-            
-           
+            font-size: 0.7rem;
 
             content: "TUE";
           }
         }
-        span[title=Wednesday]{
+        span[title="Wednesday"] {
           visibility: hidden;
-          font-size:0.1rem;
-          &::after{
+          font-size: 0.1rem;
+          &::after {
             visibility: visible;
-            font-size:0.7rem;
-            
+            font-size: 0.7rem;
+
             content: "WEN";
           }
         }
-        span[title=Thursday]{
+        span[title="Thursday"] {
           visibility: hidden;
-          font-size:0.1rem;
-          &::after{
+          font-size: 0.1rem;
+          &::after {
             visibility: visible;
-            font-size:0.7rem;
-            
+            font-size: 0.7rem;
+
             content: "THU";
           }
         }
-        span[title=Friday]{
+        span[title="Friday"] {
           visibility: hidden;
-          font-size:0.1rem;
-          &::after{
+          font-size: 0.1rem;
+          &::after {
             visibility: visible;
-            font-size:0.7rem;
-            
+            font-size: 0.7rem;
+
             content: "FRI";
           }
         }
-        span[title=Saturday]{
+        span[title="Saturday"] {
           visibility: hidden;
-          font-size:0.1rem;
-          &::after{
+          font-size: 0.1rem;
+          &::after {
             visibility: visible;
-            font-size:0.7rem;
+            font-size: 0.7rem;
             content: "SAT";
           }
         }
-        
       }
-      
     }
     tbody {
       margin: 10px auto;
@@ -164,10 +174,33 @@ html {
           a {
             font-size: 0.9rem;
             color: $ternary-color;
+            padding:  2px 4px;
             margin: 5px;
+            border: 0;
+            border-radius: 50%;
+            background-color: transparent;
+            text-align: center;
             &:hover {
               text-decoration: none;
+              background-color: lighten($ternary-color, 40%);
             }
+            &:active{
+              background-color: $secondary-color;
+              color: white;
+            }
+          }
+          .ui-state-highlight{
+            background-color: lighten($ternary-color, 40%);
+          } 
+          .ui-state-active{
+            background-color: $secondary-color;
+            color: white;
+          }
+          .ui-datepicker-other-month, .ui-datepicker-unselectable,
+          .ui-state-disabled{
+            display: inline-block;
+            opacity: 1 !important;
+            color: lighten($ternary-color, 40%) !important;
           }
         }
       }
@@ -181,6 +214,9 @@ html {
   font-family: "Arvo";
 }
 
+button:hover {
+  cursor: pointer;
+}
 .box {
   width: 256px;
   height: 255px;
@@ -198,29 +234,11 @@ html {
     font-size: 1.5rem;
   }
 }
-.bg-2-c {
-  background-color: $secondary-color;
-}
+
 .bg-w {
   background-color: rgba(255, 255, 255, 0.644);
 }
-.wrapper {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
+
 .logo-text {
   display: inline-block;
   width: 30px;
@@ -296,7 +314,7 @@ html {
 .text-section {
   position: relative;
   height: 100%;
-  width: 100vw;
+  width: 100%;
   .col {
     height: 100%;
   }
@@ -308,10 +326,10 @@ html {
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
-    pointer-events: none;
     color: white;
     position: relative;
-    z-index: 5;
+    pointer-events: none;
+    z-index: 10;
     h1 {
       text-align: center;
       font-size: 60px;
@@ -337,6 +355,7 @@ html {
       background-color: rgba(0, 0, 0, 0.199);
       text-align: center;
       padding: 5px 0 0 0;
+      
     }
     .left-arrow {
       position: absolute;
@@ -349,27 +368,35 @@ html {
       bottom: 80px;
       left: 50%;
       transform: translateX(-50%);
+      pointer-events: all;
+      cursor: pointer;
     }
+   
     .right-arrow {
       position: absolute;
       right: 80px;
       top: 50%;
       transform: translateY(-50%);
+      
     }
+   
   }
 }
 .bg {
   width: 100%;
   height: 100%;
-  background-image: url("../img/Asset\ 1.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/Asset\ 1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
   position: relative;
+  overflow: hidden;
 }
 
 .section-2 {
   height: 600px;
+  overflow: hidden;
 }
 .bg-1 {
   width: 100%;
@@ -378,26 +405,63 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  overflow: hidden;
+
+  &:hover {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../img/Asset\ 2.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    .bg-w {
+      background-color: $secondary-color;
+      color: white;
+    }
+  }
 }
 .bg-2 {
   width: 100%;
   height: 100%;
-  background-image: url("../img/Asset\ 3.png");
+  background: url("../img/Asset\ 3.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   overflow: hidden;
+  &:hover {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../img/Asset\ 3.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    .bg-w {
+      background-color: $secondary-color;
+      color: white;
+    }
+  }
 }
 .bg-3 {
   width: 100%;
   height: 100%;
-  background-image: url("../img/Asset\ 4.png");
+  background: url("../img/Asset\ 4.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative;
-  overflow: hidden;
+  &:hover {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../img/Asset\ 4.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    .bg-w {
+      background-color: $secondary-color;
+      color: white;
+    }
+  }
 }
 
 .section-3-text {
@@ -430,6 +494,13 @@ html {
     width: 100px;
     background-color: white;
     margin: 10px 0;
+  }
+  .outline-button {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: $secondary-color;
+      color: white;
+    }
   }
 }
 .outline-button {
@@ -473,6 +544,9 @@ html {
     font-weight: bold;
     margin: 0;
     padding: 0;
+    &-focus {
+      outline: 0 !important;
+    }
   }
 
   .custom-margin {
@@ -538,6 +612,7 @@ html {
       transform: rotate(135deg);
       margin-bottom: 4px;
       margin-right: 5px;
+      cursor: pointer;
     }
   }
   .second {
@@ -548,6 +623,7 @@ html {
     .section {
       position: relative;
       width: 125px;
+      z-index: 10;
     }
     .selects {
       height: fit-content;
@@ -622,7 +698,7 @@ html {
 .bg-4 {
   width: 100%;
   height: 600px;
-  background-image: url("../img/Asset\ 5.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Asset\ 5.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -636,6 +712,13 @@ html {
   button {
     position: relative;
     z-index: 4;
+  }
+  .outline-button {
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      background-color: white;
+      color: $ternary-color;
+    }
   }
 }
 
@@ -655,9 +738,9 @@ html {
   }
 }
 .footer {
-  height: 900px;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 100px;
   h1 {
     color: $secondary-color;
     font-size: 30px;

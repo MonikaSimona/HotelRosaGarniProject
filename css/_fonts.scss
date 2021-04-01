@@ -1,4 +1,36 @@
-@font-face{
-    font-family:Arvo;
-    src: url('../fonts/Arvo-Regular.ttf');
+@font-face {
+    font-family: 'Arvo';
+    src: url('../fonts/arvo-regular/ArvoRegular.eot');
+    src: url('../fonts/arvo-regular/ArvoRegular.eot') format('embedded-opentype'),
+         url('../fonts/arvo-regular/ArvoRegular.woff2') format('woff2'),
+         url('../fonts/arvo-regular/ArvoRegular.woff') format('woff'),
+         url('../fonts/arvo-regular/ArvoRegular.ttf') format('truetype'),
+         url('../fonts/arvo-regular/ArvoRegular.svg#ArvoRegular') format('svg');
+}
+@font-face {
+    font-family: 'ArvoBold';
+    src: url('../fonts/arvo-bold/ArvoBold.eot');
+    src: url('../fonts/arvo-bold/ArvoBold.eot') format('embedded-opentype'),
+         url('../fonts/arvo-bold/ArvoBold.woff2') format('woff2'),
+         url('../fonts/arvo-bold/ArvoBold.woff') format('woff'),
+         url('../fonts/arvo-bold/ArvoBold.ttf') format('truetype'),
+         url('../fonts/arvo-bold/ArvoBold.svg#ArvoBold') format('svg');
+}
+@font-face {
+    font-family: 'ArvoBoldItalic';
+    src: url('../fonts/arvo-bold-italic/ArvoBoldItalic.eot');
+    src: url('../fonts/arvo-bold-italic/ArvoBoldItalic.eot') format('embedded-opentype'),
+         url('../fonts/arvo-bold-italic/ArvoBoldItalic.woff2') format('woff2'),
+         url('../fonts/arvo-bold-italic/ArvoBoldItalic.woff') format('woff'),
+         url('../fonts/arvo-bold-italic/ArvoBoldItalic.ttf') format('truetype'),
+         url('../fonts/arvo-bold-italic/ArvoBoldItalic.svg#ArvoBoldItalic') format('svg');
+}
+@font-face {
+    font-family: 'ArvoItalic';
+    src: url('../fonts/arvo-italic/ArvoItalic.eot');
+    src: url('../fonts/arvo-italic/ArvoItalic.eot') format('embedded-opentype'),
+         url('../fonts/arvo-italic/ArvoItalic.woff2') format('woff2'),
+         url('../fonts/arvo-italic/ArvoItalic.woff') format('woff'),
+         url('../fonts/arvo-italic/ArvoItalic.ttf') format('truetype'),
+         url('../fonts/arvo-italic/ArvoItalic.svg#ArvoItalic') format('svg');
 }

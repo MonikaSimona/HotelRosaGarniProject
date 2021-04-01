@@ -1,6 +1,25 @@
 @font-face {
-  font-family: Arvo;
-  src: url("../fonts/Arvo-Regular.ttf");
+  font-family: 'Arvo';
+  src: url("../fonts/arvo-regular/ArvoRegular.eot");
+  src: url("../fonts/arvo-regular/ArvoRegular.eot") format("embedded-opentype"), url("../fonts/arvo-regular/ArvoRegular.woff2") format("woff2"), url("../fonts/arvo-regular/ArvoRegular.woff") format("woff"), url("../fonts/arvo-regular/ArvoRegular.ttf") format("truetype"), url("../fonts/arvo-regular/ArvoRegular.svg#ArvoRegular") format("svg");
+}
+
+@font-face {
+  font-family: 'ArvoBold';
+  src: url("../fonts/arvo-bold/ArvoBold.eot");
+  src: url("../fonts/arvo-bold/ArvoBold.eot") format("embedded-opentype"), url("../fonts/arvo-bold/ArvoBold.woff2") format("woff2"), url("../fonts/arvo-bold/ArvoBold.woff") format("woff"), url("../fonts/arvo-bold/ArvoBold.ttf") format("truetype"), url("../fonts/arvo-bold/ArvoBold.svg#ArvoBold") format("svg");
+}
+
+@font-face {
+  font-family: 'ArvoBoldItalic';
+  src: url("../fonts/arvo-bold-italic/ArvoBoldItalic.eot");
+  src: url("../fonts/arvo-bold-italic/ArvoBoldItalic.eot") format("embedded-opentype"), url("../fonts/arvo-bold-italic/ArvoBoldItalic.woff2") format("woff2"), url("../fonts/arvo-bold-italic/ArvoBoldItalic.woff") format("woff"), url("../fonts/arvo-bold-italic/ArvoBoldItalic.ttf") format("truetype"), url("../fonts/arvo-bold-italic/ArvoBoldItalic.svg#ArvoBoldItalic") format("svg");
+}
+
+@font-face {
+  font-family: 'ArvoItalic';
+  src: url("../fonts/arvo-italic/ArvoItalic.eot");
+  src: url("../fonts/arvo-italic/ArvoItalic.eot") format("embedded-opentype"), url("../fonts/arvo-italic/ArvoItalic.woff2") format("woff2"), url("../fonts/arvo-italic/ArvoItalic.woff") format("woff"), url("../fonts/arvo-italic/ArvoItalic.ttf") format("truetype"), url("../fonts/arvo-italic/ArvoItalic.svg#ArvoItalic") format("svg");
 }
 
 html {
@@ -9,6 +28,7 @@ html {
 
 .ui-datepicker {
   position: relative;
+  padding: 0 !important;
   z-index: 10;
   background-color: white;
   width: 250px;
@@ -16,30 +36,41 @@ html {
 }
 
 .ui-datepicker .ui-datepicker-header {
+  font-family: "Arvo";
+  margin: 0;
   padding: 10px;
   height: 50px;
   background-color: #ededed !important;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
   color: #7a7a7a;
 }
 
+.ui-datepicker .ui-datepicker-header .ui-icon {
+  display: none;
+}
+
 .ui-datepicker .ui-datepicker-header .ui-datepicker-next {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   visibility: hidden;
 }
 
 .ui-datepicker .ui-datepicker-header .ui-datepicker-next::after {
   visibility: visible;
   position: absolute;
-  right: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  top: -15px;
+  right: 0 !important;
   padding: 10px;
   font-size: 1.5rem;
   text-align: center;
@@ -47,15 +78,17 @@ html {
 }
 
 .ui-datepicker .ui-datepicker-header .ui-datepicker-prev {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   visibility: hidden;
 }
 
 .ui-datepicker .ui-datepicker-header .ui-datepicker-prev::after {
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   left: 0;
+  top: -15px;
   padding: 10px;
   font-size: 1.5rem;
   text-align: center;
@@ -65,10 +98,10 @@ html {
 
 .ui-datepicker .ui-datepicker-header .ui-datepicker-title {
   position: absolute;
-  top: 10px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  margin: 0 !important;
   text-transform: uppercase;
   color: #d94d39;
   font-size: 1.5rem;
@@ -79,6 +112,7 @@ html {
 }
 
 .ui-datepicker .ui-datepicker-calendar {
+  font-family: "Arvo";
   position: relative;
   z-index: 100;
   display: -webkit-box;
@@ -107,78 +141,78 @@ html {
   padding: 0 10px 0 10px;
 }
 
-.ui-datepicker .ui-datepicker-calendar thead tr span[title=Sunday] {
+.ui-datepicker .ui-datepicker-calendar thead tr span[title="Sunday"] {
   visibility: hidden;
   font-size: 0.1rem;
 }
 
-.ui-datepicker .ui-datepicker-calendar thead tr span[title=Sunday]::after {
+.ui-datepicker .ui-datepicker-calendar thead tr span[title="Sunday"]::after {
   visibility: visible;
   font-size: 0.7rem;
   content: "SUN";
 }
 
-.ui-datepicker .ui-datepicker-calendar thead tr span[title=Monday] {
+.ui-datepicker .ui-datepicker-calendar thead tr span[title="Monday"] {
   visibility: hidden;
   font-size: 0.1rem;
 }
 
-.ui-datepicker .ui-datepicker-calendar thead tr span[title=Monday]::after {
+.ui-datepicker .ui-datepicker-calendar thead tr span[title="Monday"]::after {
   visibility: visible;
   font-size: 0.7rem;
   content: "MON";
 }
 
-.ui-datepicker .ui-datepicker-calendar thead tr span[title=Tuesday] {
+.ui-datepicker .ui-datepicker-calendar thead tr span[title="Tuesday"] {
   visibility: hidden;
   font-size: 0.1rem;
 }
 
-.ui-datepicker .ui-datepicker-calendar thead tr span[title=Tuesday]::after {
+.ui-datepicker .ui-datepicker-calendar thead tr span[title="Tuesday"]::after {
   visibility: visible;
   font-size: 0.7rem;
   content: "TUE";
 }
 
-.ui-datepicker .ui-datepicker-calendar thead tr span[title=Wednesday] {
+.ui-datepicker .ui-datepicker-calendar thead tr span[title="Wednesday"] {
   visibility: hidden;
   font-size: 0.1rem;
 }
 
-.ui-datepicker .ui-datepicker-calendar thead tr span[title=Wednesday]::after {
+.ui-datepicker .ui-datepicker-calendar thead tr span[title="Wednesday"]::after {
   visibility: visible;
   font-size: 0.7rem;
   content: "WEN";
 }
 
-.ui-datepicker .ui-datepicker-calendar thead tr span[title=Thursday] {
+.ui-datepicker .ui-datepicker-calendar thead tr span[title="Thursday"] {
   visibility: hidden;
   font-size: 0.1rem;
 }
 
-.ui-datepicker .ui-datepicker-calendar thead tr span[title=Thursday]::after {
+.ui-datepicker .ui-datepicker-calendar thead tr span[title="Thursday"]::after {
   visibility: visible;
   font-size: 0.7rem;
   content: "THU";
 }
 
-.ui-datepicker .ui-datepicker-calendar thead tr span[title=Friday] {
+.ui-datepicker .ui-datepicker-calendar thead tr span[title="Friday"] {
   visibility: hidden;
   font-size: 0.1rem;
 }
 
-.ui-datepicker .ui-datepicker-calendar thead tr span[title=Friday]::after {
+.ui-datepicker .ui-datepicker-calendar thead tr span[title="Friday"]::after {
   visibility: visible;
   font-size: 0.7rem;
   content: "FRI";
 }
 
-.ui-datepicker .ui-datepicker-calendar thead tr span[title=Saturday] {
+.ui-datepicker .ui-datepicker-calendar thead tr span[title="Saturday"] {
   visibility: hidden;
   font-size: 0.1rem;
 }
 
-.ui-datepicker .ui-datepicker-calendar thead tr span[title=Saturday]::after {
+.ui-datepicker .ui-datepicker-calendar thead tr span[title="Saturday"]::after {
   visibility: visible;
   font-size: 0.7rem;
   content: "SAT";
@@ -192,11 +226,38 @@ html {
 .ui-datepicker .ui-datepicker-calendar tbody tr td a {
   font-size: 0.9rem;
   color: #7a7a7a;
+  padding: 2px 4px;
   margin: 5px;
+  border: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  text-align: center;
 }
 
 .ui-datepicker .ui-datepicker-calendar tbody tr td a:hover {
   text-decoration: none;
+  background-color: #e0e0e0;
+}
+
+.ui-datepicker .ui-datepicker-calendar tbody tr td a:active {
+  background-color: #d94d39;
+  color: white;
+}
+
+.ui-datepicker .ui-datepicker-calendar tbody tr td .ui-state-highlight {
+  background-color: #e0e0e0;
+}
+
+.ui-datepicker .ui-datepicker-calendar tbody tr td .ui-state-active {
+  background-color: #d94d39;
+  color: white;
+}
+
+.ui-datepicker .ui-datepicker-calendar tbody tr td .ui-datepicker-other-month, .ui-datepicker .ui-datepicker-calendar tbody tr td .ui-datepicker-unselectable,
+.ui-datepicker .ui-datepicker-calendar tbody tr td .ui-state-disabled {
+  display: inline-block;
+  opacity: 1 !important;
+  color: #e0e0e0 !important;
 }
 
 .main {
@@ -204,6 +265,10 @@ html {
   margin: 0;
   padding: 0;
   font-family: "Arvo";
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .box {
@@ -230,31 +295,8 @@ html {
   font-size: 1.5rem;
 }
 
-.bg-2-c {
-  background-color: #d94d39;
-}
-
 .bg-w {
   background-color: rgba(255, 255, 255, 0.644);
-}
-
-.wrapper {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
 }
 
 .logo-text {
@@ -343,7 +385,7 @@ html {
 .text-section {
   position: relative;
   height: 100%;
-  width: 100vw;
+  width: 100%;
 }
 
 .text-section .col {
@@ -367,10 +409,10 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
   text-transform: uppercase;
-  pointer-events: none;
   color: white;
   position: relative;
-  z-index: 5;
+  pointer-events: none;
+  z-index: 10;
 }
 
 .text-section .text h1 {
@@ -417,6 +459,8 @@ html {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  pointer-events: all;
+  cursor: pointer;
 }
 
 .text-section .text .right-arrow {
@@ -430,15 +474,18 @@ html {
 .bg {
   width: 100%;
   height: 100%;
-  background-image: url("../img/Asset 1.png");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/Asset 1.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Asset 1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top;
   position: relative;
+  overflow: hidden;
 }
 
 .section-2 {
   height: 600px;
+  overflow: hidden;
 }
 
 .bg-1 {
@@ -448,28 +495,70 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  overflow: hidden;
+}
+
+.bg-1:hover {
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/Asset 2.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Asset 2.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.bg-1:hover .bg-w {
+  background-color: #d94d39;
+  color: white;
 }
 
 .bg-2 {
   width: 100%;
   height: 100%;
-  background-image: url("../img/Asset 3.png");
+  background: url("../img/Asset 3.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   overflow: hidden;
 }
 
+.bg-2:hover {
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/Asset 3.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Asset 3.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.bg-2:hover .bg-w {
+  background-color: #d94d39;
+  color: white;
+}
+
 .bg-3 {
   width: 100%;
   height: 100%;
-  background-image: url("../img/Asset 4.png");
+  background: url("../img/Asset 4.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative;
-  overflow: hidden;
+}
+
+.bg-3:hover {
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/Asset 4.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Asset 4.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+
+.bg-3:hover .bg-w {
+  background-color: #d94d39;
+  color: white;
 }
 
 .section-3-text {
@@ -516,6 +605,16 @@ html {
   width: 100px;
   background-color: white;
   margin: 10px 0;
+}
+
+.section-3-text .outline-button {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.section-3-text .outline-button:hover {
+  background-color: #d94d39;
+  color: white;
 }
 
 .outline-button {
@@ -575,6 +674,11 @@ html {
   padding: 0;
 }
 
+.info-form input-focus,
+.info-form textarea-focus {
+  outline: 0 !important;
+}
+
 .info-form .custom-margin {
   display: inline-block;
   width: 11px;
@@ -628,6 +732,7 @@ html {
           transform: rotate(135deg);
   margin-bottom: 4px;
   margin-right: 5px;
+  cursor: pointer;
 }
 
 .info-form .second {
@@ -643,6 +748,7 @@ html {
 .info-form .second .section {
   position: relative;
   width: 125px;
+  z-index: 10;
 }
 
 .info-form .second .selects {
@@ -729,7 +835,8 @@ html {
 .bg-4 {
   width: 100%;
   height: 600px;
-  background-image: url("../img/Asset 5.png");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/Asset 5.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Asset 5.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -746,6 +853,16 @@ html {
 .bg-4 button {
   position: relative;
   z-index: 4;
+}
+
+.bg-4 .outline-button {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.bg-4 .outline-button:hover {
+  background-color: white;
+  color: #7a7a7a;
 }
 
 .mail-form {
@@ -767,9 +884,9 @@ html {
 }
 
 .footer {
-  height: 900px;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 100px;
 }
 
 .footer h1 {
