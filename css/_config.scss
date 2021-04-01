@@ -23,7 +23,7 @@ $ternary-color: #7a7a7a;
     
 }
 @mixin media-xl {
-    @media screen and (max-width:1200px) {
+    @media screen and (min-width:1200px) {
         @content;
     }
     

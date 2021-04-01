@@ -16,82 +16,101 @@
 <body>
     <div class="main">
         <div class="container-fluid p-0 p-lg-0 p-md-0 p-sm-0">
-            <div class="row m-0 p-0 m-lg-0 bg">
-                <div class="col m-0 p-0 m-lg-0 m-md-0 m-sm-0 p-lg-0 p-md-0 p-sm-0 ">
-                    <div class="row m-0 p-0 m-lg-0 m-md-0 m-sm-0 menu d-flex">
-                        <div class="col-lg-1 col-md-1 col-sm-1 col-1 mt-4 ml-4 d-flex align-items-center">
-                            <img src="./img/logo.png" class="logo-image" alt="">
-                            <span class="logo-text">
-                                Rosa
-                                Hotel
-                                Garni
-                            </span>
-
-                        </div>
-                        <div
-                            class="col mr-sm-2 mr-md-2 mr-lg-4 mr-xl-5  mt-4 pr-xl-5 d-flex  justify-content-end justify-content-sm-end justify-content-md-end  ">
-                            <div class="row menu-items d-flex 
-                                justify-content-center
-                                justify-content-sm-end
-                                justify-content-md-center 
-                                justify-content-lg-end 
-                                 ">
-                                <div class=" col-sm-7 col-md-11 col-lg-7 col-xl-7 mt-3 d-flex 
-                                    flex-column
-                                    flex-sm-column
-                                    flex-md-row
-                                    flex-lg-row
-                                    flex-xl-row
-                                    align-items-end
-                                    align-items-sm-end
-                                    align-items-md-center
-                                    align-items-lg-center 
-                                    align-items-xl-center
-                                    justify-content-sm-start
-                                    justify-content-md-end 
-                                    justify-content-lg-end 
-                                    justify-content-xl-end ">
-                                    <div class="menu-section d-flex 
-                                        flex-column
-                                        flex-sm-column
-                                        flex-md-row
-                                        flex-lg-row
-                                        flex-xl-row
-                                        align-items-md-center
-                                        align-items-lg-center 
-                                        align-items-xl-center">
-                                        <span class="mx-2 meet-us">meet us</span>
-                                        <div class="menu-drop">
-                                            <div class="menu-drop-item">A family business</div>
-                                            <div class="menu-drop-item ">The good old way</div>
-                                            <div class="menu-drop-item">How to reach</div>
-                                            <div class="menu-drop-item">Contacts</div>
+            <div class="carousel slide" data-ride="carousel" id="slider" >
+                <ul class="carousel-indicators">
+                    <li data-target="#slider" data-slide-to="0" class="active" ></li>
+                    <li data-target="#slider" data-slide-to="1"></li>
+                  </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item active ">
+                        <img src="./img/Asset 1.png" alt="" class="carousel-img">
+                    </div>
+                    <div class="carousel-item  ">
+                        <img src="./img/Asset 1.2.png" alt="" class="carousel-img">
+                    </div>
+                    <a class="carousel-control-prev carousel-arrow" href="#slider" data-slide="prev">
+                        <span class="arrow-place left-arrow"><i class="fas fa-arrow-left"></i></span>
+                      </a>
+                      <a class="carousel-control-next carousel-arrow" href="#slider" data-slide="next">
+                        <span class="arrow-place right-arrow"><i class="fas fa-arrow-right"></i></span>
+                      </a>
+                    <div class="row m-0 p-0 m-lg-0  "  >
+                        <div class="col m-0 p-0 m-lg-0 m-md-0 m-sm-0 p-lg-0 p-md-0 p-sm-0  ">
+                            <div class="row m-0 p-0 m-lg-0 m-md-0 m-sm-0 menu d-flex">
+                                <div class="col-lg-1 col-md-1 col-sm-1 col-1 mt-4 ml-4 d-flex align-items-center">
+                                    <img src="./img/logo.png" class="logo-image" alt="">
+                                    <span class="logo-text">
+                                        Rosa
+                                        Hotel
+                                        Garni
+                                    </span>
+                                </div>
+                                <div
+                                    class="col m-0 mr-md-2 mr-lg-4 mr-xl-5  mt-4 pr-xl-5  justify-content-end   " >
+                                    <img id="mobile-cta" class="mobile-menu" src="./img/menu.svg" alt="open navigation">
+                                    <div class="row menu-items
+                                        justify-content-center
+                                        justify-content-sm-end
+                                        justify-content-md-center
+                                        justify-content-lg-end
+                                         ">
+                                        <div class=" col-12 mt-0 col-sm-12 col-md-11 col-lg-7 col-xl-7  d-flex
+                                            flex-column
+                                            flex-sm-column
+                                            flex-md-row
+                                            flex-lg-row
+                                            flex-xl-row
+                                            align-items-end
+                                            align-items-sm-end
+                                            align-items-md-center
+                                            align-items-lg-center
+                                            align-items-xl-center
+                                            justify-content-sm-start
+                                            justify-content-md-end
+                                            justify-content-lg-end
+                                            justify-content-xl-end ">
+                                            <img id="mobile-exit" class="mobile-menu-exit" src="./img/exit.svg" alt="close navigation">
+                                            <div class="menu-section d-flex
+                                                flex-column
+                                                flex-sm-column
+                                                flex-md-row
+                                                flex-lg-row
+                                                flex-xl-row
+                                                align-items-md-center
+                                                align-items-lg-center
+                                                align-items-xl-center">
+                                                <span class="mx-2 meet-us">meet us</span>
+                                                <div class="menu-drop">
+                                                    <div class="menu-drop-item">A family business</div>
+                                                    <div class="menu-drop-item ">The good old way</div>
+                                                    <div class="menu-drop-item">How to reach</div>
+                                                    <div class="menu-drop-item">Contacts</div>
+                                                </div>
+                                                <span class="mx-2">sleep</span>
+                                                <span class="mx-2">eat </span>
+                                                <span class="mx-2">see</span>
+                                                <span class="mx-2">to do</span>
+                                                <div class="cross-line"></div>
+                                                <span class="mx-2"> <a href="#ask-for-res"> ask for resevation </a></span>
+                                            </div>
                                         </div>
-                                        <span class="mx-2">sleep</span>
-                                        <span class="mx-2">eat </span>
-                                        <span class="mx-2">see</span>
-                                        <span class="mx-2">to do</span>
-                                        <div class="cross-line"></div>
-                                        <span class="mx-2"> <a href="#ask-for-res"> ask for resevation </a></span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row text-section m-0 p-0
-                        m-0 m-sm-0 m-md-0 m-lg-0 m-xl-0
-                        p-0 p-sm-0 p-md-0 p-lg-0 p-xl-0  ">
-                        <div
-                            class="col m-0 p-0 m-lg-0 m-md-0 m-sm-0 p-lg-0 p-xl-0 m-xl-0 p-md-0 p-sm-0 d-flex flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-center align-items-xl-center">
-
-                            <div class="text ">
-                                <span class="arrow-place left-arrow"><i class="fas fa-arrow-left"></i></span>
-                                <span class="arrow-place right-arrow"><i class="fas fa-arrow-right"></i></span>
-                                <a href="#section2" class="arrow-place down-arrow" alt=""><i class="fas fa-arrow-down"></i></a>
-                                <h1>everyone's different, our rooms too.</h1>
-                                <div class="line"></div>
-                                <h3>hope your still available</h3>
-
+                            <div class="row text-section m-0 p-0
+                                m-0 m-sm-0 m-md-0 m-lg-0 m-xl-0
+                                p-0 p-sm-0 p-md-0 p-lg-0 p-xl-0  ">
+                                <div
+                                    class="col m-0 p-0 m-lg-0 m-md-0 m-sm-0 p-lg-0 p-xl-0 m-xl-0 p-md-0 p-sm-0 d-flex flex-column align-items-center align-items-sm-center align-items-md-center align-items-lg-center align-items-xl-center">
+                                    <div class="text ">
+                                        <!-- <span class="arrow-place left-arrow"><i class="fas fa-arrow-left"></i></span> -->
+                                        <!-- <span class="arrow-place right-arrow"><i class="fas fa-arrow-right"></i></span> -->
+                                        <a href="#section2" class="arrow-place down-arrow" alt=""><i class="fas fa-arrow-down"></i></a>
+                                        <h1>everyone's different, our rooms too.</h1>
+                                        <div class="line"></div>
+                                        <h3>hope your still available</h3>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

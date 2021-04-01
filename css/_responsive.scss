@@ -1,30 +1,25 @@
-@include media-sm{
-  .info-form{
-    .notes{
-      width:290px !important;
+@include media-sm {
+  .info-form {
+    .notes {
+      width: 290px !important;
     }
-    .second{
+    .second {
       width: 98%;
     }
   }
   .mail-form {
     input {
-     
       margin-bottom: 10px;
-    }
-   
-  }
-  .menu{
-    .menu-items{
-      .cross-line{
-        transform: rotate(0deg) !important;
-      }
     }
   }
  
-  
 }
 @include media-md {
+  .carousel{
+    .carousel-img{
+     width: 1000px;
+    }
+  }
   .headline {
     h1 {
       font-size: 30px;
@@ -70,22 +65,22 @@
   }
   .info-form {
     width: 80%;
-    .notes{
+    .notes {
       width: 600px;
       text-indent: 105px;
     }
-    .selects{
+    .selects {
       height: fit-content;
       display: flex;
       justify-content: space-evenly;
     }
-    .second{
-      .textarea-label{
+    .second {
+      .textarea-label {
         position: absolute;
         top: 40px;
         left: 0;
       }
-      .textarea{
+      .textarea {
         position: absolute;
         top: 40px;
         width: 100%;
@@ -96,6 +91,20 @@
     width: 100%;
   }
   .menu {
+    .mobile-menu,
+    .mobile-menu-exit {
+      display: block;
+      cursor: pointer;
+    }
+   
+    .mobile-menu {
+      color: white;
+      margin-top: 10px;
+      height: 40px;
+      position: absolute;
+      right: 20px;
+      z-index: 100;
+    }
     .logo-image {
       width: 50px;
       height: 50px;
@@ -104,56 +113,71 @@
       font-size: 15px;
     }
     .menu-items {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: darken($ternary-color, 40%);
+      margin: 0;
+      height: 270px;
+      width: 100%;
+      padding-top: 30px;
+      z-index: 100;
       span {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+        margin: 5px 0;
       }
       .cross-line {
-        transform: rotate(135deg);
+        transform: rotate(0deg);
         width: 50px;
       }
     }
-    .menu-drop{
-      width: 160px;
+    .menu-drop {
+      width: 100%;
+      left: -10px;
+      font-size: 0.7rem;
     }
   }
-.text-section{
-  .text {
-    h1 {
-      font-size: 40px;
-      padding: 0 10px;
-      
-    }
-    h3 {
-      font-size: 20px;
-    }
-    .right-arrow{
-      position: absolute;
-      right: 10px;
-    }
-    .left-arrow{
-      position: absolute;
-      left: 10px;
-    }
-    .down-arrow{
-      position: absolute;
-      bottom: 30px;
+  .carousel {
+    .carousel-control-next,
+    .carousel-control-prev {
+      top: 50%;
+      margin: 0;
     }
   }
-}
-  
+  .text-section {
+    .text {
+      h1 {
+        font-size: 40px;
+        padding: 0 10px;
+      }
+      h3 {
+        font-size: 20px;
+      }
+      .right-arrow {
+        position: absolute;
+        right: 10px;
+      }
+      .left-arrow {
+        position: absolute;
+        left: 10px;
+      }
+      .down-arrow {
+        position: absolute;
+        bottom: 30px;
+      }
+    }
+  }
 }
 @include media-lg {
- 
-    html {
-        width: 100%;
-      }
+  html {
+    width: 100%;
+  }
   .menu-items {
-    
+    display: flex;
     .text {
-        
       h1 {
         font-size: 50px;
-        
       }
       h3 {
         font-size: 30px;
@@ -161,4 +185,5 @@
     }
   }
 }
-
+@include media-xl {
+}
