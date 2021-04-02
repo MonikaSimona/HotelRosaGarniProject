@@ -26,10 +26,15 @@ html {
   scroll-behavior: smooth;
 }
 
+#ui-datepicker-div {
+  position: relative;
+  z-index: 1000;
+}
+
 .ui-datepicker {
   position: relative;
   padding: 0 !important;
-  z-index: 10;
+  z-index: 300;
   background-color: white;
   width: 270px;
   font-family: "Arvo";
@@ -45,6 +50,7 @@ html {
   border-left: 0;
   border-right: 0;
   position: relative;
+  z-index: 300;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,6 +105,7 @@ html {
   text-transform: uppercase;
   color: #d94d39;
   font-size: 1.5rem;
+  z-index: 300;
 }
 
 .ui-datepicker .ui-datepicker-header .ui-datepicker-title .ui-datepicker-year {
@@ -108,7 +115,7 @@ html {
 .ui-datepicker .ui-datepicker-calendar {
   font-family: "Arvo";
   position: relative;
-  z-index: 100;
+  z-index: 300;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,6 +140,8 @@ html {
   font-size: 0.8rem;
   color: #7a7a7a;
   padding: 0 10px 0 10px;
+  position: relative;
+  z-index: 300;
 }
 
 .ui-datepicker .ui-datepicker-calendar thead tr span[title="Sunday"] {
@@ -221,7 +230,7 @@ html {
   display: inline-block;
   font-size: 0.9rem;
   color: #7a7a7a;
-  padding: 0 7px;
+  padding: 2px 7px;
   border-radius: 50%;
   margin: 2px;
   border: 0;
@@ -248,7 +257,8 @@ html {
   color: white;
 }
 
-.ui-datepicker .ui-datepicker-calendar tbody tr td .ui-datepicker-other-month, .ui-datepicker .ui-datepicker-calendar tbody tr td .ui-datepicker-unselectable,
+.ui-datepicker .ui-datepicker-calendar tbody tr td .ui-datepicker-other-month,
+.ui-datepicker .ui-datepicker-calendar tbody tr td .ui-datepicker-unselectable,
 .ui-datepicker .ui-datepicker-calendar tbody tr td .ui-state-disabled {
   display: inline-block;
   opacity: 1 !important;
@@ -314,6 +324,11 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.menu .menu-items .ask-res {
+  position: relative;
+  z-index: 200;
 }
 
 .menu a {
@@ -392,7 +407,7 @@ button:hover {
 .mobile-menu-exit {
   position: absolute;
   right: 1em;
-  top: -.5rem;
+  top: -0.5rem;
   cursor: pointer;
   z-index: 200;
 }
@@ -409,7 +424,7 @@ button:hover {
 
 .text-section .text {
   width: 100%;
-  height: 700px;
+  height: 750px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -459,7 +474,8 @@ button:hover {
   cursor: pointer;
 }
 
-.carousel, .carousel-inner {
+.carousel,
+.carousel-inner {
   width: 100%;
   height: 100%;
 }
@@ -470,6 +486,8 @@ button:hover {
 
 .carousel .carousel-arrow {
   z-index: 120;
+  height: 80% !important;
+  top: 20%;
 }
 
 .carousel .arrow-place {
@@ -487,7 +505,7 @@ button:hover {
 .carousel .left-arrow {
   position: absolute;
   left: 50px;
-  top: 70%;
+  top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -495,7 +513,7 @@ button:hover {
 .carousel .right-arrow {
   position: absolute;
   right: 50px;
-  top: 70%;
+  top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -1017,6 +1035,10 @@ button:hover {
   .carousel .carousel-img {
     width: 1000px;
   }
+  .carousel .left-arrow,
+  .carousel .right-arrow {
+    top: 30%;
+  }
   .headline h1 {
     font-size: 30px;
   }
@@ -1074,6 +1096,12 @@ button:hover {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+  }
+  .info-form .custom-margin {
+    display: none;
+  }
+  .info-form .second .section {
+    z-index: unset;
   }
   .info-form .second .textarea-label {
     position: absolute;

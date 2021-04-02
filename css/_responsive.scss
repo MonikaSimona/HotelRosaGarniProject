@@ -12,14 +12,18 @@
       margin-bottom: 10px;
     }
   }
- 
 }
 @include media-md {
-  .carousel{
-    .carousel-img{
-     width: 1000px;
+  .carousel {
+    .carousel-img {
+      width: 1000px;
+    }
+    .left-arrow,
+    .right-arrow {
+      top: 30%;
     }
   }
+
   .headline {
     h1 {
       font-size: 30px;
@@ -74,7 +78,13 @@
       display: flex;
       justify-content: space-evenly;
     }
+    .custom-margin{
+      display: none;
+    }
     .second {
+      .section {
+        z-index: unset;
+      }
       .textarea-label {
         position: absolute;
         top: 40px;
@@ -96,7 +106,7 @@
       display: block;
       cursor: pointer;
     }
-   
+
     .mobile-menu {
       color: white;
       margin-top: 10px;
