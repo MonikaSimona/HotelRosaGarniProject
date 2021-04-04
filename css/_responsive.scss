@@ -7,11 +7,7 @@
       width: 98%;
     }
   }
-  .mail-form {
-    input {
-      margin-bottom: 10px;
-    }
-  }
+ 
 }
 @include media-md {
   .carousel {
@@ -23,7 +19,11 @@
       top: 30%;
     }
   }
-
+  .mail-form {
+    input {
+      margin-bottom: 10px;
+    }
+  }
   .headline {
     h1 {
       font-size: 30px;

@@ -527,9 +527,9 @@ button:hover {
           filter: brightness(60%);
 }
 
-.bg {
+.bg-first {
   width: 100%;
-  height: 100%;
+  height: 910px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/Asset 1.png");
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Asset 1.png");
   background-repeat: no-repeat;
@@ -537,7 +537,19 @@ button:hover {
   background-position: left top;
   position: absolute;
   top: 0;
-  height: 100%;
+  overflow: hidden;
+}
+
+.bg-second {
+  width: 100%;
+  height: 910px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/Asset 1.2.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Asset 1.2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+  position: absolute;
+  top: 0;
   overflow: hidden;
 }
 
@@ -1026,9 +1038,6 @@ button:hover {
   .info-form .second {
     width: 98%;
   }
-  .mail-form input {
-    margin-bottom: 10px;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1038,6 +1047,9 @@ button:hover {
   .carousel .left-arrow,
   .carousel .right-arrow {
     top: 30%;
+  }
+  .mail-form input {
+    margin-bottom: 10px;
   }
   .headline h1 {
     font-size: 30px;
